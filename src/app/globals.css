@@ -2,26 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+  @font-face {
+    font-family: gillix;
+    src: url(/assets/fonts/gillix/gellix-regular.woff2) format("woff2"),
+      url(/assets/fonts/gillix/gellix-semibold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: domaine;
+    src: url(/assets/fonts/domaine/domaine-regular.woff2) format("woff2"),
+      url(/assets/fonts/domaine/domaine-bold.woff2) format("woff2");
+  }
 }
+@layer components {
+  body {
+    @apply font-domaine;
+  }
+  a,
+  li {
+    @apply tracking-wide font-gillix;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-gillix text-secondary;
+  }
+  p {
+    @apply font-gillix text-secondary;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  @media (max-width: 1199px) {
+    .oza-container {
+      max-width: 100%;
+      margin-right: 1.875rem;
+      margin-left: 1.875rem;
+    }
+
+    .testimonial-container {
+      max-width: 100%;
+      margin-left: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .oza-container {
+      max-width: 1130px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .testimonial-container {
+      max-width: 1250px;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .oza-container {
+      max-width: 1250px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .testimonial-container {
+      max-width: 1460px;
+      padding-left: 1.5rem;
+      margin-left: auto;
+    }
+  }
+  .btn-md {
+    @apply px-8 py-3 text-sm font-bold text-white rounded bg-primary font-gillix;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.font-domaine {
+  font-family: domaine, sans-serif;
+}
+
+.font-gillix {
+  font-family: gillix, sans-serif;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(2 5 83 / var(--tw-text-opacity));
+}
+
+.bg-primaryShade {
+  --tw-bg-opacity: 1;
+  background-color: rgb(215 231 255 / var(--tw-bg-opacity));
 }
