@@ -117,18 +117,10 @@ const Header: React.FC<Props> = (props) => {
                       className="w-[60px]"
                     />
 
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      Log In
-                    </a>
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      Sign Up
-                    </a>
+                    <p>
+                      Pay bills with a credit card to free up cash and earn
+                      rewards.
+                    </p>
                   </div>
                 </div>
               </div>

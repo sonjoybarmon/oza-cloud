@@ -3,9 +3,8 @@ import AccordionItem from "../../common/AccordionItem"; // Adjust the path as ne
 
 const data = [
   {
-    title: "What is web hosting and why do I need it?",
-    content:
-      "Web hosting is a service that allows individuals and businesses to...",
+    title: "Quick credit decisions",
+    content: "Find out if you’re approved in just a few minutes.",
   },
   {
     title: "How does OzaCloud's Cloud Server differ from traditional hosting?",
@@ -35,7 +34,7 @@ const FAQs = () => {
     <section>
       <div className="my-20 oza-container desktop:my-32">
         <h2 className="laptop:text-5.5xl text-4.5xl font-extrabold leading-tight mb-12">
-          Frequently asked questions
+          Online business checking FAQs
         </h2>
 
         {data.map((item, index) => (
